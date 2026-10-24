@@ -13,16 +13,17 @@ jobs:
             - name: Checkout de código
               uses: actions/checkout@v4
 
-            - name: Configurar Python 3.13.15
-              uses: actions/setup-node@v4
+            - name: Configurar Python 3.13
+              uses: actions/setup-python@v5
               with:
-                python-version: '3.13.15'
+                python-version: '3.13'
             
             - name: Install dependencies
               working-directory: ./burguer-app/auth-service
               run: |
-               pip install -r requirements.txt
+                python -m pip install -r requirements.txt
 
             - name: Rodar testes
+              working-directory: ./burguer-app/auth-service
               run: |
-                pytest -v
+                python -m pytest -v
