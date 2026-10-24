@@ -27,4 +27,4 @@ jobs:
               working-directory: ./burguer-app/auth-service
               run: |
                 pytest -v
-                randon cc ./test
+                radon cc ./test
