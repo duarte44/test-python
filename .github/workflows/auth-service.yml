@@ -26,5 +26,5 @@ jobs:
             - name: Rodar testes
               working-directory: ./burguer-app/auth-service
               run: |
-                python -m pytest -v
+                pytest -v
                 randon cc ./test
